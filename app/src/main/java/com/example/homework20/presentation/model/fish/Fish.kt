@@ -4,5 +4,5 @@ data class Fish(
     val id: Int,
     val name: String,
     val type: String,
-    val location: Int,
+    val location: String,
 )

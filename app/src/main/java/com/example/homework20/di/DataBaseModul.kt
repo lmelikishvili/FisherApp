@@ -21,7 +21,7 @@ object DataBaseModul {
     fun provideAppDataBase(@ApplicationContext context: Context): AppDatabase{
         return Room.databaseBuilder(
             context,
-            AppDatabase::class.java, "NewDatabase"
+            AppDatabase::class.java, "NewDatabase2"
         ).build()
     }
 
