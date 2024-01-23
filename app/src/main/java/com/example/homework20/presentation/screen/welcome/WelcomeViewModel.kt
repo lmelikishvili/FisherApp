@@ -17,6 +17,7 @@ class WelcomeViewModel: ViewModel() {
         when (event) {
             is NavigationEvent.NavigateToLogin-> toLogin()
             is NavigationEvent.NavigateToRegister-> toRegister()
+            else -> {}
         }
     }
 

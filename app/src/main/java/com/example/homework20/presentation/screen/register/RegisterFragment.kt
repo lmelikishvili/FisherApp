@@ -58,9 +58,9 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
         }
     }
 
-    private fun handleNavigationEvents(event: RegisterViewModel.LogInUiEvent) {
+    private fun handleNavigationEvents(event: RegisterViewModel.RegisterUiEvent) {
         when (event) {
-            is RegisterViewModel.LogInUiEvent.NavigateToLogin -> findNavController().navigate(
+            is RegisterViewModel.RegisterUiEvent.NavigateToLogin -> findNavController().navigate(
                 R.id.action_registerFragment_to_loginFragment
             )
         }

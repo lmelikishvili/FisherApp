@@ -21,7 +21,11 @@
         android:id="@+id/loginFragment"
         android:name="com.example.homework20.presentation.screen.log_in.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_fishFragment"
+            app:destination="@id/fishFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.homework20.presentation.screen.register.RegisterFragment"
@@ -31,4 +35,9 @@
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/fishFragment"
+        android:name="com.example.homework20.presentation.screen.fish.FishFragment"
+        android:label="fragment_fish"
+        tools:layout="@layout/fragment_fish" />
 </navigation>

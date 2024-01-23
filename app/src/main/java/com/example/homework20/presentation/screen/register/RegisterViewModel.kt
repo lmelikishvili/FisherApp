@@ -28,8 +28,8 @@ class RegisterViewModel @Inject constructor(
         }
     }
 
-    private val _uiEvent = MutableSharedFlow<LogInUiEvent>()
-    val uiEvent: SharedFlow<LogInUiEvent> get() = _uiEvent
+    private val _uiEvent = MutableSharedFlow<RegisterUiEvent>()
+    val uiEvent: SharedFlow<RegisterUiEvent> get() = _uiEvent
 
 
 
@@ -57,18 +57,18 @@ class RegisterViewModel @Inject constructor(
                     password = password
                 )
             )
-            _uiEvent.emit(LogInUiEvent.NavigateToLogin)
+            _uiEvent.emit(RegisterUiEvent.NavigateToLogin)
         }
     }
 
     private fun toLogin(){
         viewModelScope.launch {
-            _uiEvent.emit(LogInUiEvent.NavigateToLogin)
+            _uiEvent.emit(RegisterUiEvent.NavigateToLogin)
         }
     }
 
-    sealed interface LogInUiEvent {
-        data object NavigateToLogin : LogInUiEvent
+    sealed interface RegisterUiEvent {
+        data object NavigateToLogin : RegisterUiEvent
     }
 
 }

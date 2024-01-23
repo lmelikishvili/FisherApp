@@ -11,14 +11,14 @@ import com.example.homework20.presentation.base.BaseFragment
 
 class FishFragment : BaseFragment<FragmentFishBinding>(FragmentFishBinding::inflate) {
     override fun setup() {
-        TODO("Not yet implemented")
+
     }
 
     override fun setupListeners() {
-        TODO("Not yet implemented")
+
     }
 
     override fun bindData() {
-        TODO("Not yet implemented")
+
     }
 }
