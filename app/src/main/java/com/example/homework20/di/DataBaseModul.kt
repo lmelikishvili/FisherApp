@@ -2,6 +2,7 @@ package com.example.homework20.di
 
 import android.content.Context
 import androidx.room.Room
+import com.example.homework20.data.local.dao.FishDao
 import com.example.homework20.data.local.dao.UserDao
 import com.example.homework20.data.local.database.AppDatabase
 import dagger.Module
@@ -20,7 +21,7 @@ object DataBaseModul {
     fun provideAppDataBase(@ApplicationContext context: Context): AppDatabase{
         return Room.databaseBuilder(
             context,
-            AppDatabase::class.java, "usersDatabase"
+            AppDatabase::class.java, "NewDatabase"
         ).build()
     }
 
@@ -29,5 +30,11 @@ object DataBaseModul {
     @Provides
     fun provideUserDao(appDatabase: AppDatabase):UserDao{
         return appDatabase.userDao()
+    }
+
+    @Singleton
+    @Provides
+    fun provideFishDao(appDatabase: AppDatabase):FishDao{
+        return appDatabase.fishDao()
     }
 }

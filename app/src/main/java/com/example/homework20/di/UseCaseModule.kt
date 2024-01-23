@@ -1,10 +1,11 @@
 package com.example.homework20.di
 
-import com.example.homework20.data.local.dao.UserDao
-import com.example.homework20.data.repository.LocalUserRepositoryImpl
+import com.example.homework20.domain.repository.fish.LocalFishRepository
 import com.example.homework20.domain.repository.user.LocalUserRepository
-import com.example.homework20.domain.usecase.GetUsersUseCase
-import com.example.homework20.domain.usecase.InsertUserUseCase
+import com.example.homework20.domain.usecase.fish.GetFishUseCase
+import com.example.homework20.domain.usecase.fish.InsertFishUseCase
+import com.example.homework20.domain.usecase.user.GetUsersUseCase
+import com.example.homework20.domain.usecase.user.InsertUserUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,6 +27,18 @@ object UseCaseModule {
     @Provides
     fun provideGetUsersUseCase(localUserRepository: LocalUserRepository): GetUsersUseCase {
         return GetUsersUseCase(repository = localUserRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideInsertFishUseCase(localFishRepository: LocalFishRepository): InsertFishUseCase {
+        return InsertFishUseCase(repository = localFishRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGetFishsUseCase(localFishRepository: LocalFishRepository): GetFishUseCase  {
+        return GetFishUseCase(repository = localFishRepository)
     }
 
 }

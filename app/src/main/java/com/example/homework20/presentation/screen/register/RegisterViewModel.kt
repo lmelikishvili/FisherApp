@@ -3,11 +3,11 @@ package com.example.homework20.presentation.screen.register
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.homework20.domain.model.user.GetUser
-import com.example.homework20.domain.usecase.GetUsersUseCase
-import com.example.homework20.domain.usecase.InsertUserUseCase
+import com.example.homework20.domain.usecase.user.GetUsersUseCase
+import com.example.homework20.domain.usecase.user.InsertUserUseCase
 import com.example.homework20.presentation.event.users.UsersEvent
 import com.example.homework20.presentation.mapper.user.toPresenter
-import com.example.homework20.presentation.model.User
+import com.example.homework20.presentation.model.user.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -15,7 +15,6 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import kotlin.random.Random
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor(

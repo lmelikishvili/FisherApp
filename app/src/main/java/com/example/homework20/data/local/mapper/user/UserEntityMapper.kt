@@ -1,4 +1,4 @@
-package com.example.homework20.data.local.mapper
+package com.example.homework20.data.local.mapper.user
 
 import com.example.homework20.data.local.entity.UserEntity
 import com.example.homework20.domain.model.user.GetUser

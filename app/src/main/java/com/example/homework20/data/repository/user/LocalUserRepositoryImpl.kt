@@ -1,8 +1,8 @@
-package com.example.homework20.data.repository
+package com.example.homework20.data.repository.user
 
 import com.example.homework20.data.local.dao.UserDao
-import com.example.homework20.data.local.mapper.toDataLayerModel
-import com.example.homework20.data.local.mapper.toDomain
+import com.example.homework20.data.local.mapper.user.toDataLayerModel
+import com.example.homework20.data.local.mapper.user.toDomain
 import com.example.homework20.domain.model.user.GetUser
 import com.example.homework20.domain.repository.user.LocalUserRepository
 import kotlinx.coroutines.flow.Flow

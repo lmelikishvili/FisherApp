@@ -1,4 +1,4 @@
-package com.example.homework20.presentation.model
+package com.example.homework20.presentation.model.user
 
 data class User(
     val id: Int,
